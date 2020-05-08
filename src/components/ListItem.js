@@ -4,6 +4,7 @@ import { ShoppingListContext } from '../contexts/ShoppingListContext';
 const ListItem = ({ name, id }) => {
   //const {removeItem} = useContext(ShoppingListContext);
   const {dispatch} = useContext(ShoppingListContext);
+  
   return (
     <li>
       <h3>

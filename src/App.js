@@ -4,8 +4,6 @@ import List from "./components/List";
 import AddItemInput from "./components/AddItemInput";
 import ShoppingListProvider from "./contexts/ShoppingListContext";
 
-
-
 function App() {
   return (
     <div className="App">

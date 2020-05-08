@@ -4,6 +4,7 @@ import { ShoppingListContext } from "../contexts/ShoppingListContext";
 
 const List = () => {
   const { products } = useContext(ShoppingListContext);
+  
   return products.length ? (
     <div className="shopping-list">
       <h1>Shopping List:</h1>
