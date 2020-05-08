@@ -13,35 +13,39 @@ const ShoppingListContextProvider = (props) => {
     localStorage.setItem("products", JSON.stringify(products));
   }, [products]);
 
-  /*  const [products, setProducts] = useState([
-    { name: "orange", id: 1 },
-    { name: "apple", id: 2 },
-    { name: "bananas", id: 3 },
-    { name: "peaches", id: 4 },
-    { name: "avocados", id: 5 },
-  ]); */
-
-  /*   const addItem = (name) => {
-    console.log("Add", name);
-    setProducts([...products, { name: name, id: products.length + 1 }]);
-  };
-
-  const removeItem = (id) => {
-    console.log("remove", id);
-    setProducts(products.filter((product) => product.id !== id));
-  }; */
-
-  /* return (
-    <ShoppingListContext.Provider value={{ products, addItem, removeItem }}>
-      {props.children}
-    </ShoppingListContext.Provider>
-  ); */
-
   return (
     <ShoppingListContext.Provider value={{ products, dispatch }}>
       {props.children}
     </ShoppingListContext.Provider>
   );
+
+  /*  
+    // all the code without Reducers and LocalStorage:
+
+    const [products, setProducts] = useState([
+        { name: "orange", id: 1 },
+        { name: "apple", id: 2 },
+        { name: "bananas", id: 3 },
+        { name: "peaches", id: 4 },
+        { name: "avocados", id: 5 },
+    ]); 
+
+    const addItem = (name) => {
+        console.log("Add", name);
+        setProducts([...products, { name: name, id: products.length + 1 }]);
+    };
+
+    const removeItem = (id) => {
+        console.log("remove", id);
+        setProducts(products.filter((product) => product.id !== id));
+    }; 
+
+    return (
+        <ShoppingListContext.Provider value={{ products, addItem, removeItem }}>
+        {props.children}
+        </ShoppingListContext.Provider>
+    ); 
+    */
 };
 
 export default ShoppingListContextProvider;
